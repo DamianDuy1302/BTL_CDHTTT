@@ -1,0 +1,30 @@
+-i https://pypi.org/simple
+# flask==2.0.0
+# numpy==1.17.4
+# tensorflow==1.15.2
+# opencv-python-headless
+# werkzeug==0.16.0
+# matplotlib==3.1.1
+# gunicorn==19.5.0
+# Pillow==6.0.0
+# image
+# scipy
+
+flask==2.2.5
+numpy==1.26.4
+tensorflow==2.19.0
+opencv-python-headless
+Werkzeug==2.2.2
+matplotlib==3.10.1
+gunicorn==19.5.0    
+pillow==11.2.1
+image==1.5.33
+scipy==1.15.2
+mediapipe==0.10.21
+ultralytics==8.0.178
+torch>=1.7.0
+
+# pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+# pip install -r requirements.txt
+# python app.py
+

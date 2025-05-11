@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% block content %}
+<div class="shot_detection-container">
+  <div class="result-container">
+    <div class="result-title">Analysis result</div>
+    <div class="shot-container">
+      <div class="shot-counting">
+        <div class="image-description">
+          <div class="stat-name">Shot counting</div>
+          <div class="underline"></div>
+        </div>
+
+        <div class="analysis-card">
+          <table class="analysis-table">
+            <thead>
+              <tr>
+                <th>Attempts</th>
+                <th>Miss</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ shooting_result.attempts }}</td>
+                <td>{{ shooting_result.miss }}</td>
+                <td>{{ shooting_result.made }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="shot-counting" style="flex: 1">
+        <div class="image-description">
+          <div class="stat-name">Pose analysis</div>
+          <div class="underline"></div>
+        </div>
+
+        <div class="analysis-card">
+          <table class="analysis-table">
+            <thead>
+              <tr>
+                <th>Elbow</th>
+                <th>Knee</th>
+                <th>Release</th>
+                <th>Release Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ shooting_result.avg_elbow_angle}}&deg;</td>
+                <td>{{ shooting_result.avg_knee_angle }}&deg;</td>
+                <td>{{ shooting_result.avg_release_angle }}&deg;</td>
+                <td>{{ shooting_result.avg_ballInHand_time }} s</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="result-row">
+      <div class="image-container">
+        <div class="image-description">
+          <div class="stat-name">Tracing result</div>
+          <div class="underline"></div>
+        </div>
+        <a href="/static/detections/basketball_trace.jpg" target="_new"
+          ><img
+            src="/static/detections/basketball_trace.jpg"
+            class="upload-image-thumb"
+        /></a>
+      </div>
+      <div class="image-container">
+        <div class="image-description">
+          <div class="stat-name">Trajectory fitting</div>
+          <div class="underline trajectory-underline"></div>
+        </div>
+        <a href="/static/detections/basketball_trace.jpg" target="_new"
+          ><img
+            src="/static/detections/basketball_trace.jpg"
+            class="upload-image-thumb"
+        /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
